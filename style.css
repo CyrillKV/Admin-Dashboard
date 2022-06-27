@@ -1,0 +1,69 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li,.icon {
+  padding: 5px;
+}
+.container{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
+  height: 100vh;
+}
+.header{
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #bae6fd;
+}
+.sidebar{
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: #0369a1;
+}
+.content{
+  grid-column: 2;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template: 1fr 1fr / 2fr 1fr;
+  padding: 0.5rem 0 1rem 0;
+  background-color: #e0f2fe;
+}
+.projects_container, .announces_container, .trends_container{
+  display: grid;
+  grid-template-rows: 3rem 1fr;
+  padding: 1rem;
+}
+.projects_container{
+  grid-area: 1 / 1 / 3 / 2;
+}
+.projects{
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+.project{
+  background-color: lightgrey;
+}
+.announces, .trends{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+.announces .announce, .trends .trend{
+  flex: 1;
+  background-color: lightgrey;
+}
